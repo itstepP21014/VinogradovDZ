@@ -3,14 +3,17 @@
 
 int main()
 {
-    int a, b, c;
-    scanf ("%d\n%d\n", &a, &b);
-    printf ("The result is: ");
-    c=a;
-    for (int i=1; i<b; i++)
+    int result, number, a, b=1;
+    printf ("Enter number: ");
+    scanf( "%d", &number );
+    printf ("\nEnter the second number: ");
+    scanf ( "%d", &a );
+    result=number;
+    while (b!=a);
     {
-        a=c*a;
+        result=result*number;
+        ++b;
     }
-    printf ("%d", a);
+    printf( "\nResult is: %d", result);
     return 0;
-}
+} \\ € в упор не в»жу тут никакой ошибки. однако, почему-то программа не работает. ѕочему? 
