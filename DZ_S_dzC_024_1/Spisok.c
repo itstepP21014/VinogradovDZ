@@ -1,6 +1,8 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <stdbool.h>
+
+typedef int sizeList;
 
 typedef  struct doublyNode_
 {
@@ -23,20 +25,23 @@ void pushInTheEnd(List **list,int data);
 int popInTheEnd(List *list);
 int popFront(List *list) ;
 
-int main()
+int main(void)
 {
-    printf("\n");
     List *head=NULL;
-    int k=10;
-
+    int k=13;
     initListTwo(&head);
-    pushFront(&head,k);
-    pushFront(&head,k);
-    pushFront(&head,k);
+    pushFront(&head,1);
+    pushFront(&head,1);
+    pushFront(&head,1);
     pushInTheEnd(head,9);
     pushInTheEnd(head,9);
     pushInTheEnd(head,9);
-
+    printf("%d\n",popInTheEnd(head));
+    printf("%d\n",popInTheEnd(head));
+    printf("%d\n",popInTheEnd(head));
+    printf("%d\n",popFront(head));
+    printf("%d\n",popFront(head));
+    printf("%d\n",popFront(head));
     return 0;
 }
 
@@ -103,8 +108,8 @@ void pushInTheEnd(List **list,int data)
     if(temp==NULL)
         exit(-1);
     temp->data=data;
-    temp->link=NULL;
-    temp->first=(*list)->last;
+    temp->next=NULL;
+    temp->link=(*list)->last;
     if((*list)->last)
         (*list)->last->link=temp;
     (*list)->last=temp;
