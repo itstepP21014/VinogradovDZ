@@ -6,3 +6,30 @@
 Таблица виртуальных методов - это метод взаимодействия и иерархии между методами. Обеспечивает корректную работу подклассов. 
 
 Поле - структура объектно ориентированного программирования
+
+#include<string>
+
+class Stroka
+{
+public:
+  StringCopy () {};
+  
+private:
+  int dlinna;
+  char Simvol;
+
+public:
+  String ();
+  Simvol::const char get();
+}
+
+Stroka::String ()
+{
+  dlinna = 0;
+  simvol = 0;
+};
+
+Stroka::StringCopy ()
+{
+  strcpy (куда, откуда)
+};
